@@ -47,9 +47,32 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'site/program' => 'site/program',
+                'site/blog' => 'site/blog',
+                'site/kontak' => 'site/kontak',
             ],
         ],
-        
+
+        'assetManager' => [
+            'bundles' => [
+                'yii/web/JqueryAsset' => [
+                    "sourcePath" => null,
+                    'basePath' => '@webroot',
+                    'baseUrl' => '@web',
+                    'js' => [
+                        'template/js/vendor/jquery-1.12.4.min.js',
+                    ]
+                ],
+                'yii\bootstrap5\BootstrapAsset' => [
+                    'sourcePath' => null,
+                    'basePath' => '@webroot',
+                    'baseUrl' => '@web',
+                    'css' => [
+                        'template/css/bootstrap.min.css',
+                    ],
+                ],
+            ],
+        ],          
     ],
     'params' => $params,
 ];
